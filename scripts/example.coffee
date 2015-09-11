@@ -15,6 +15,10 @@ module.exports = (robot) ->
 
    robot.hear /tips/i, (res) ->
      res.send "*tips fedora*"
+
+   robot.hear /rdc/i, (res) ->
+     res.send "RDC GET"
+
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
   #   if doorType is "pod bay"
