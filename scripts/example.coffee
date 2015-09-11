@@ -19,6 +19,20 @@ module.exports = (robot) ->
    robot.hear /rdc/i, (res) ->
      res.send "RDC GET"
 
+   robot.hear /vacilao/i, (res) ->
+     res.send "vasilao morre cedo"
+
+   robot.hear /ayy/i, (res) ->
+     res.send "lmao"
+
+    robot.hear /xD/i, (res) ->
+      res.send "xisde face"
+
+    robot.hear /hs/i, (res) ->
+      res.send "pacotinho face?"
+
+
+
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
   #   if doorType is "pod bay"
