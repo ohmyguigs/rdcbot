@@ -37,10 +37,8 @@ module.exports = (robot) ->
     robot.hear /bora/i, (res) ->
       res.send "STEP IT UP, YOU ARE TOO SLOW"
 
-    robot.respond /bot mais lerdo que luccas/, (res) ->
-       setTimeout () ->
-         res.send "Me chamou de lerdo?"
-       , 60 * 1000
+    robot.hear /como foi/i, (res) ->
+      res.send "0,2"
 
     lulz = ['lol', 'lel', 'lel', 'kek', 'kek', 'lel', 'kek']
     robot.hear /kek/i, (res) ->
