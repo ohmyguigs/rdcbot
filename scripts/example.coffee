@@ -31,6 +31,15 @@ module.exports = (robot) ->
     robot.hear /hs/i, (res) ->
       res.send "pacotinho face?"
 
+    robot.hear /corre/i, (res) ->
+      res.send "GOTTA GO FAST"
+
+    robot.hear /bora/i, (res) ->
+      res.send "STEP IT UP, YOU ARE TOO SLOW"
+
+    lulz = ['lol', 'lel', 'lel', 'kek', 'kek', 'lel', 'kek']
+    robot.hear /kek/i, (res) ->
+      res.send res.random lulz
 
 
   # robot.respond /open the (.*) doors/i, (res) ->
