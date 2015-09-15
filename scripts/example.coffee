@@ -16,7 +16,10 @@ module.exports = (robot) ->
    robot.hear /tips/i, (res) ->
      res.send "*tips fedora*"
 
-   robot.hear /rdc/i, (res) ->
+   robot.hear /alguem/i, (res) ->
+     res.send "RDC GET"
+
+   robot.hear /e ai/i, (res) ->
      res.send "RDC GET"
 
    robot.hear /vacilao/i, (res) ->
@@ -39,6 +42,9 @@ module.exports = (robot) ->
 
     robot.hear /como foi/i, (res) ->
       res.send "0,2"
+
+    robot.hear /bye captain/i, (res) ->
+      res.send "i'll  sleep now, but i'll never die..."
 
     lulz = ['lol', 'lel', 'lel', 'kek', 'kek', 'lel', 'kek']
     robot.hear /kek/i, (res) ->
