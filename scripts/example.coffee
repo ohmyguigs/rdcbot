@@ -10,6 +10,9 @@
 
 module.exports = (robot) ->
 
+   robot.hear /rdc get/i, (res) ->
+     res.send "420"
+
    robot.hear /danger/i, (res) ->
      res.send "LUCCAS ALERT!!"
 
