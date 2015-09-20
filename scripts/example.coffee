@@ -63,6 +63,10 @@ module.exports = (robot) ->
       local = robot.brain.get('almocoGlobal')
       res.send "nego ta no #{local} face"
 
+    robot.hear /comer onde/i, (res, almocoType) ->
+      local = robot.brain.get('almocoGlobal')
+      res.send "nego ta no #{local} face"
+
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
   #   if doorType is "pod bay"
