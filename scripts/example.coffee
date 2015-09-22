@@ -66,13 +66,13 @@ module.exports = (robot) ->
       if robot.brain.get('almocoGlobal') == null
         res.send "Tem almoço não. Use: rdcbot almoço help"
       else
-        res.send "A boa é #{robot.brain.get('almocoGlobal')}"
+        res.send "A galera ta no #{robot.brain.get('almocoGlobal')}"
 
-    robot.hear /comer aonde/i, (res, almocoType) ->
+    robot.hear /comer onde/i, (res, almocoType) ->
       if robot.brain.get('almocoGlobal') == null
         res.send "Tem almoço não. Use: rdcbot almoço help"
       else
-        res.send "A boa é #{robot.brain.get('almocoGlobal')}"
+        res.send "A galera ta no #{robot.brain.get('almocoGlobal')}"
 
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
