@@ -59,13 +59,20 @@ module.exports = (robot) ->
 
       res.reply "almoço setado no #{almocoType} face"
 
-    robot.hear /comer aonde/i, (res, almocoType) ->
-      local = robot.brain.get('almocoGlobal')
-      res.send "nego ta no #{local} face"
+    robot.respond /almoço help/i, (res) ->
+      res.send "Use o comando: rdcbot set almoço <almoço face>"
 
-    robot.hear /comer onde/i, (res, almocoType) ->
-      local = robot.brain.get('almocoGlobal')
-      res.send "nego ta no #{local} face"
+    robot.hear /comer aonde/i, (res, almocoType) ->
+      if robot.brain.get('almocoGlobal') == null
+        res.send "Tem almoço não. Use: rdcbot almoço help"
+      else
+        res.send "A boa é #{robot.brain.get('almocoGlobal')}"
+
+    robot.hear /comer aonde/i, (res, almocoType) ->
+      if robot.brain.get('almocoGlobal') == null
+        res.send "Tem almoço não. Use: rdcbot almoço help"
+      else
+        res.send "A boa é #{robot.brain.get('almocoGlobal')}"
 
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
