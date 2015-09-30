@@ -44,7 +44,7 @@ module.exports = (robot) ->
       res.send "STEP IT UP, YOU ARE TOO SLOW"
 
     robot.hear /como foi/i, (res) ->
-      res.send "0,2"
+      res.send "0,2 mas a média foi 0,8"
 
     robot.hear /bye captain/i, (res) ->
       res.send "i'll  sleep now, but i'll never die..."
@@ -73,7 +73,6 @@ module.exports = (robot) ->
         res.send "Tem almoço não. Use: rdcbot almoço help"
       else
         res.send "A galera ta no #{robot.brain.get('almocoGlobal')}"
-
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
   #   if doorType is "pod bay"
