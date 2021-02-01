@@ -39,6 +39,8 @@ module.exports = (robot) ->
 
     robot.hear /corre/i, (res) ->
       res.send "GOTTA GO FAST"
+    robot.hear /corre/i, (res) ->
+      res.send "GOTTA GO FAST"
 
     robot.hear /bora/i, (res) ->
       res.send "STEP IT UP, YOU ARE TOO SLOW"
